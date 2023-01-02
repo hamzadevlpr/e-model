@@ -1,0 +1,220 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+section {
+    width: 90%;
+    margin: auto;
+}
+
+.headline {
+    border-top: 3px solid #00A886;
+    border-bottom: 3px solid #00A886;
+    width: 65vw;
+    height: 30vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+    padding: 1.5vw;
+    margin-top: 5vw;
+}
+
+.headline>h1 {
+    font-family: 'Playfair Display';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 2.56vw;
+    line-height: 47px;
+    text-align: center;
+    letter-spacing: 0.02em;
+    color: #FFFFFF;
+}
+.container {
+    position: relative;
+    max-width: 700px;
+    width: 100%;
+    padding: 25px;
+    border-radius: 8px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+    background-color: transparent;
+}
+
+.container header {
+    font-size: 1.5rem;
+    color: #fff;
+    font-weight: 500;
+    text-align: center;
+}
+
+.container .form {
+    margin-top: 30px;
+}
+
+.form .input-box {
+    width: 100%;
+    margin-top: 20px;
+}
+
+.input-box {
+    color: #fff;
+}
+
+.form :where(.input-box input, .select-box) {
+    position: relative;
+    height: 40px;
+    width: 100%;
+    outline: none;
+    font-size: 1rem;
+    color: #fff;
+    margin-top: 8px;
+    border: 1.2px solid #00A886;
+    border-radius: 6px;
+    padding: 0 15px;
+    background-color: transparent;
+}
+
+::placeholder {
+    color: #fff;
+}
+
+.input-box input:focus {
+    box-shadow: 0 1px 0 rgba(0, 0, 0, 0.1);
+}
+
+.form .column {
+    display: flex;
+    column-gap: 15px;
+}
+
+.form .gender-box {
+    margin-top: 20px;
+}
+
+.gender-box h3 {
+    color: #fff;
+    font-size: 1rem;
+    font-weight: 400;
+    margin-bottom: 8px;
+}
+
+.form :where(.gender-option, .gender) {
+    display: flex;
+    align-items: center;
+    column-gap: 50px;
+    flex-wrap: wrap;
+}
+
+.form .gender {
+    column-gap: 5px;
+}
+
+.gender input {
+    accent-color: rgb(130, 106, 251);
+}
+
+.address :where(input, .select-box) {
+    margin-top: 15px;
+}
+
+.select-box select {
+    height: 100%;
+    width: 100%;
+    outline: none;
+    border: none;
+    color: #fff;
+    font-size: 1rem;
+    background-color: transparent;
+}
+
+option {
+    color: #00A886;
+    background-color: #140C18;
+}
+
+option:focus {
+    outline: none;
+}
+
+.form button {
+    color: #fff;
+    font-size: 1rem;
+    font-weight: 400;
+    margin-top: 30px;
+    border: none;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    width: 234px;
+    height: 46px;
+    background: #00A886;
+    box-shadow: 0px 5.25714px 5.25714px rgba(0, 0, 0, 0.25);
+    border-radius: 5px;
+}
+
+input[type="file"] {
+    display: none;
+}
+
+.file-options {
+    margin-top: 40px;
+}
+
+.file {
+    display: flex;
+    flex-direction: column;
+}
+
+.file>span {
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 24px;
+    letter-spacing: 0.01em;
+    color: #FFFFFF;
+    margin-bottom: 10px;
+}
+
+.custom-file-upload {
+    min-width: 158px;
+    min-height: 40px;
+    text-align: center;
+    border: 2px solid #00A886;
+    border-radius: 5px;
+    display: inline-block;
+    padding: 6px 12px;
+    cursor: pointer;
+    color: #fff;
+}
+
+#additional-info {
+    padding: 15px;
+    width: 100%;
+    height: 113px;
+    color: #fff;
+    margin-top: 8px;
+    border: 1.2px solid #00A886;
+    border-radius: 6px;
+    background-color: transparent;
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 400;
+}
+#additional-info:focus{
+   outline: none;
+}
+/*Responsive*/
+@media screen and (max-width: 500px) {
+    .form .column {
+        flex-wrap: wrap;
+    }
+
+    .form :where(.gender-option, .gender) {
+        row-gap: 15px;
+    }
+}
+
