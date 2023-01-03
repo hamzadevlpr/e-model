@@ -130,14 +130,15 @@ section {
     font-size: 1rem;
     background-color: transparent;
 }
-
-option {
+ option {
     color: #00A886;
     background-color: #140C18;
+    padding: 10px !important;
+    columns: red;
 }
 
 option:focus {
-    outline: none;
+    /* outline: none; */
 }
 
 .form button {

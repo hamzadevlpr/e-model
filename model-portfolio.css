@@ -1,38 +1,41 @@
-.portfolio {
+.float-container {
+    border: 3px solid #fff;
+    padding: 20px;
+    background-color: white;
     width: 100%;
     height: 750px;
-    background-color: white;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-evenly;
-    align-items: center;
 }
 
-.port {
-    border: 1px solid #000;
-    width: 90%;
+.float-child {
+    width: 50%;
+    height: 590px;
+    float: left;
+    padding: 20px;
+    border: 1px solid red;
     text-align: center;
 }
 
-.prt {
-    display: inline-block;
-    width: 45%;
-    border: 1px solid #000;
-    height: 650px;
+.model-box {
+    width: 340px;
+    height: 490px;
+    border: 3px solid #B87FD9;
+    position: absolute;
+    top: 30px;
+    left: 30px;
 }
 
-.model-pic {
-    border: 1px solid #000;
+.model-portfolio-pic {
     background-image: url(./Modelssss/amanda-large.png);
-    background-size: contain;
-    width: 400px;
-    height: 550px;
     background-repeat: no-repeat;
-    
+    background-size: contain;
+    width: 29.28vw;
+    height: 550px;
+    margin: auto;
+    position: relative;
 }
 
-.left-port {
-    display: flex;
-    justify-content: space-evenly;
-    /* Hamza Malik */
+@media (max-width: 768px) {
+    .float-child {
+        width: 100%;
+    }
 }
