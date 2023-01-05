@@ -14,7 +14,6 @@
 .model-all {
     display: flex;
     flex-wrap: wrap;
-    /* width: 90%; */
     justify-content: center;
     margin: auto;
 }

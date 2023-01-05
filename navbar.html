@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/bf6718b6c6.js" crossorigin="anonymous"></script>
+    <title>Document</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700;800&display=swap');
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        nav {
+            border: var(--wh-bd);
+        }
+
+        header {
+            background-color: #140C18;
+            /* margin-top: 30px; */
+            border: var(--wh-bd);
+            height: 125px;
+            width: 100%;
+            display: flex;
+            justify-content: space-evenly;
+            align-items: center;
+        }
+
+        .logo {
+            background-image: url(./images/logo.png);
+            background-size: contain;
+            border: var(--wh-bd);
+            width: 96px;
+            height: 96px;
+            background-repeat: no-repeat;
+        }
+
+        ul {
+            border: var(--wh-bd);
+        }
+
+        li {
+            border: var(--wh-bd);
+            list-style: none;
+            padding: 10px 20px;
+            display: inline-block;
+            text-align: center;
+        }
+
+        .mod button {
+            font-size: 15.39px;
+        }
+
+        .mod a {
+            text-align: left;
+        }
+
+        header a {
+            text-decoration: none;
+            color: white;
+            font-family: 'Poppins', sans-serif;
+            font-size: 15.39px;
+            font-weight: 600;
+            cursor: pointer;
+        }
+
+        a:hover {
+            color: #00A886;
+        }
+
+        .main-usser {
+            cursor: pointer;
+            border-left: 1px solid #fff;
+            height: 70px;
+            margin: 0 auto;
+            /* position: relative; */
+        }
+
+        .left-btnns {
+            display: flex;
+            align-items: center;
+        }
+
+        .fa-sort-down {
+            position: relative;
+            top: -2px;
+            left: 5px;
+        }
+
+        .bcm,
+        .sign {
+            cursor: pointer;
+            width: 120px;
+            height: 33.66px;
+            color: #fff;
+            background-color: #140C18;
+            box-shadow: 0px 3.84656px 3.84656px rgba(0, 0, 0, 0.25);
+            border-radius: 5.76983px;
+            border: 1px solid #00A886;
+            font-family: 'Poppins';
+            font-style: normal;
+            font-weight: 600;
+            font-size: 0.84143125em;
+            padding: 0.5em 1.2em;
+            margin-right: 1.25em;
+            text-align: center;
+        }
+
+        .sign {
+            background-color: #00A886;
+            box-shadow: 0px 3.84656px 3.84656px rgba(128, 113, 113, 0.25);
+            position: relative;
+            top: 26px;
+            left: 24px;
+            margin-right: 26px;
+        }
+        .user-name {
+            background-color: #140C18;
+            color: #fff;
+            font-size: 13px;
+            border: none;
+            font-weight: 600;
+        }
+
+        .user-drop {
+            position: relative;
+            display: block;
+        }
+
+        .dropdown-content {
+            display: none;
+            top: 20px;
+            position: absolute;
+            background-color: #140C18;
+            min-width: 150px;
+            box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+
+        }
+
+        .dropdown-content i {
+            color: #fff;
+            padding: 5px;
+        }
+
+        .dropdown-content a {
+            color: #fff;
+            padding: 5px;
+            text-decoration: none;
+            display: block;
+            font-size: 13px;
+        }
+
+        .dropdown-content a:hover {
+            color: #00A886;
+        }
+
+        /* .dropdown-content a:hover  { color: #140C18;} */
+        .user-drop:hover .dropdown-content {
+            display: block;
+        }
+
+    </style>
+</head>
+
+<body>
+    <header>
+        <div class="logo"></div>
+        <nav>
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li>
+                    <div class="user-drop mod">
+                        <button class="user-name">Models <i class="fa-solid fa-sort-down"></i></button>
+                        <div class="dropdown-content">
+                            <a href="#">All</a>
+                            <a href="#">Female</a>
+                            <a href="#">Male</a>
+                        </div>
+                    </div>
+                    <div class="dropdown-content">
+                        <a href="#">
+                            <i class="fa-solid fa-user"></i> Profile</a>
+                        <a href="#">
+                            <i class="fa-solid fa-gear"></i>Setting</a>
+                        <a href="#">
+                            <i class="fa-solid fa-right-from-bracket"></i> Log out</a>
+                    </div>
+                </li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Contact</a></li>
+
+            </ul>
+        </nav>
+        <div class="left-btnns">
+            <buttom class="bcm">Short List</buttom>
+
+            <div class="main-usser">
+                <buttom class="sign">Sign up</buttom>
+                <buttom class="sign">Log in</buttom>
+
+            </div>
+
+        </div>
+        </div>
+    </header>
+</body>
+
+
+</html>

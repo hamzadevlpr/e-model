@@ -91,31 +91,8 @@ section {
     column-gap: 15px;
 }
 
-.form .gender-box {
-    margin-top: 20px;
-}
 
-.gender-box h3 {
-    color: #fff;
-    font-size: 1rem;
-    font-weight: 400;
-    margin-bottom: 8px;
-}
 
-.form :where(.gender-option, .gender) {
-    display: flex;
-    align-items: center;
-    column-gap: 50px;
-    flex-wrap: wrap;
-}
-
-.form .gender {
-    column-gap: 5px;
-}
-
-.gender input {
-    accent-color: rgb(130, 106, 251);
-}
 
 .address :where(input, .select-box) {
     margin-top: 15px;
@@ -133,8 +110,6 @@ section {
  option {
     color: #00A886;
     background-color: #140C18;
-    padding: 10px !important;
-    columns: red;
 }
 
 option:focus {

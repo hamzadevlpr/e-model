@@ -24,11 +24,11 @@
         overflow-x: hidden;
     }
 
-    .main-home {
+    /* .main-home {
         height: 99.9vh;
         width: 90%;
         margin: 0 auto;
-    }
+    } */
 
     nav {
         border: var(--wh-bd);
