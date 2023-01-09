@@ -1,0 +1,326 @@
+body {
+    position: relative !important;
+}
+#popup1{
+    display: none;
+}
+.popup-container {
+    width: 650px;
+    height: 450px;
+    background: #2A1933;
+    border-radius: 15px;
+    margin: auto;
+    margin-top: 100px;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+
+.popup {
+    width: 630px;
+    height: 430px;
+    border-radius: 20px;
+
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.main-heading {
+    padding-left: 10px;
+}
+
+hr {
+    border: 2px solid #00A886;
+    background-color: #00A886;
+    width: 95%;
+    margin: auto;
+    border-radius: 100px;
+    margin-top: 5px;
+}
+
+.close {
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background-color: #00A886;
+    float: right;
+    position: relative;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+
+    cursor: pointer;
+}
+
+.close>i {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+p.sortheading {
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 23px;
+    line-height: 34px;
+    display: flex;
+    align-items: center;
+    color: #FFFFFF;
+}
+
+.main-filter {
+    display: flex;
+    flex-direction: row;
+    margin-left: 10px;
+}
+
+.filterpopup {
+    /* border: 1px solid #fff; */
+    width: 290px;
+    height: 320px;
+}
+
+
+.radio-group {
+    padding-top: 10px;
+    font-family: 'Poppins';
+    font-size: 17px;
+    color: #fff;
+}
+
+.radio {
+    font-family: 'Poppins';
+    font-style: normal;
+    font-size: 17px;
+    display: inline-block;
+    vertical-align: middle;
+    color: #fff;
+    margin: 5px;
+    position: relative;
+    padding-left: 30px;
+    cursor: pointer;
+}
+
+.radio+.radio {
+    margin-left: 10px;
+}
+
+.radio input[type='radio'] {
+    display: none;
+
+}
+
+.radio span {
+    width: 18px;
+    height: 18px;
+    border-radius: 50%;
+    border: 2px solid #00A886;
+    display: block;
+    position: absolute;
+    top: 3px;
+    left: 0;
+}
+
+.radio span:after {
+    content: "";
+    height: 8px;
+    width: 8px;
+    background-color: #00A886;
+    display: block;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(0);
+    border-radius: 50%;
+    transition: 50ms ease-in-out 0s;
+}
+
+.radio input[type='radio']:checked~span:after {
+    transform: translate(-50%, -50%) scale(1);
+
+}
+
+.heifilter {
+    padding-top: 10px;
+    height: 50px;
+    display: flex;
+    justify-content: space-evenly;
+    flex-direction: column;
+}
+
+.hei {
+    font-family: 'Poppins';
+    font-style: normal;
+    font-size: 17px;
+    color: #fff;
+}
+
+::placeholder {
+    font-family: 'Poppins';
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 21px;
+    color: #BDAFAF;
+}
+
+input[type="number"] {
+    height: 34px;
+    width: 200px;
+    outline: none;
+    padding: 10px;
+    font-family: 'Poppins';
+    color: white;
+    font-weight: 500;
+    font-size: 14px;
+    border: 1.2px solid #00A886;
+    background-color: transparent;
+    float: right;
+    border-radius: 5px;
+}
+
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+}
+
+.check-wrapper {
+    padding-top: 10px;
+}
+
+.check-wrapper h5 {
+    font-family: 'Poppins';
+    font-weight: 600;
+    font-size: 17px;
+    display: flex;
+    align-items: center;
+    color: #FFFFFF;
+    padding-bottom: 10px;
+}
+
+.check {
+
+    padding-top: 8px;
+}
+
+.check label {
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 15px;
+    color: #FFFFFF;
+    padding: 15px;
+}
+
+.column {}
+
+.input-box input,
+.select-box {
+    position: relative;
+    height: 40px;
+    width: 80%;
+    outline: none;
+    font-size: 1rem;
+    color: #fff;
+    border: 2px solid #00A886;
+    border-radius: 6px;
+    padding: 0 15px;
+    background-color: transparent;
+    margin: 15px auto;
+}
+
+.select-box select {
+    height: 100%;
+    width: 100%;
+    outline: none;
+    border: none;
+    color: #fff;
+    font-size: 1rem;
+    background-color: transparent;
+}
+
+option {
+    color: #00A886;
+    background-color: #140C18;
+}
+
+/* input range */
+input[type=range] {
+    box-sizing: border-box;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    width: 200px;
+    text-align: center;
+    margin: 0;
+    padding: 0 2px;
+    /* Add some L/R padding to ensure box shadow of handle is shown */
+    overflow: hidden;
+    border: 0;
+    border-radius: 1px;
+    outline: none;
+    background: linear-gradient(#00A886, #00A886) no-repeat center;
+    /* Use a linear gradient to generate only the 2px height background */
+    background-size: 100% 2px;
+    pointer-events: none;
+    margin-left: 38px;
+}
+
+input[type=range]:active,
+input[type=range]:focus {
+    outline: none;
+}
+
+input[type=range]::-webkit-slider-thumb {
+    height: 16px;
+    width: 16px;
+    border-radius: 28px;
+    background-color: #00A886;
+    position: relative;
+    margin: 5px 0;
+    /* Add some margin to ensure box shadow is shown */
+    cursor: pointer;
+    -webkit-appearance: none;
+    appearance: none;
+    pointer-events: all;
+    box-shadow: 0 1px 4px 0.5px rgba(0, 0, 0, 0.25);
+}
+
+input[type=range]::-webkit-slider-thumb::before {
+    content: ' ';
+    display: block;
+    position: absolute;
+    top: 13px;
+    left: 100%;
+    width: 2000px;
+    height: 2px;
+}
+
+.multi-range {
+    position: relative;
+    height: 50px;
+}
+
+.multi-range input[type=range] {
+    position: absolute;
+}
+
+.multi-range input[type=range]:nth-child(1)::-webkit-slider-thumb::before {
+    background-color: red;
+}
+
+.multi-range input[type=range]:nth-child(2) {
+    background: none;
+}
+
+.multi-range input[type=range]:nth-child(2)::-webkit-slider-thumb::before {
+    background-color: #00A886;
+}
+
+/* input range */
+.range-value {
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 17px;
+    color: #FFFFFF;
+    margin-left: 38px;
+}

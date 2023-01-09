@@ -11,6 +11,7 @@
     <title>Homepage</title>
     <link rel="stylesheet" href="./homepage.css">
     <link rel="stylesheet" href="./bookmodel.css">
+    <link rel="stylesheet" href="popup.css">
 </head>
 
 <body>
@@ -69,7 +70,96 @@
                 <button class="sub-btn male">Male</button>
             </div>
             <div class="right_filter">
-                <button class="filter">Sort by: Feature <i class="fa-solid fa-sort-down"></i></button>
+                <button class="filter" onclick="filter()">Sort by: Feature <i class="fa-solid fa-sort-down"></i></button>
+            </div>
+            <div id="popup1" class="overlay popup-container">
+                <div class="popup">
+                    <div class="main-heading">
+                        <div class="close"><i class="fa-solid fa-xmark"></i></div>
+                        <p class="sortheading">Sort By Feature</p>
+                        <hr>
+                    </div>
+                    <div class="main-filter">
+                        <div class="filterpopup">
+                            <div class="radio-group">Gender :
+                                <label class="radio">
+                                    <input type="radio" value="male" name="gender">Male
+                                    <span></span>
+                                </label>
+                                <label class="radio">
+                                    <input type="radio" value="female" name="gender">Female
+                                    <span></span>
+                                </label>
+                            </div>
+                            <div class="heifilter">
+                                <label class="hei">Height:
+                                    <input type="number" placeholder="5.1 ft">
+                                </label>
+                            </div>
+                            <div class="check-wrapper">
+                                <h5>Complextion</h5>
+                                <div class="check">
+                                    <input type="checkbox" id="check">
+                                    <label for="check">Extremely Fair Skin</label>
+                                </div>
+                                <div class="check">
+                                    <input type="checkbox" id="check">
+                                    <label for="check">Fair Skin</label>
+                                </div>
+                                <div class="check">
+                                    <input type="checkbox" id="check">
+                                    <label for="check">Medium Skin</label>
+                                </div>
+                                <div class="check">
+                                    <input type="checkbox" id="check">
+                                    <label for="check">Olive Skin</label>
+                                </div>
+                                <div class="check">
+                                    <input type="checkbox" id="check">
+                                    <label for="check">Brown Skin</label>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="filterpopup">
+                            <div class="input-box">
+                                <div class="select-box">
+                                    <select>
+                                        <option hidden>Hair Color</option>
+                                        <option>Female</option>
+                                        <option>Male</option>
+                                        <option>other</option>
+                                    </select>
+                                </div>
+                            </div>
+        
+                            <div class="input-box">
+                                <div class="select-box">
+                                    <select>
+                                        <option hidden>Eye Color</option>
+                                        <option>Female</option>
+                                        <option>Male</option>
+                                        <option>other</option>
+                                    </select>
+                                </div>
+                                <span class="multi-range">
+                                    <p class="range-value">Hips</p>
+                                    <input type="range" min="0" max="50" value="5" id="lower">
+                                    <input type="range" min="0" max="50" value="45" id="upper">
+                                </span><br><br>
+                                <span class="multi-range">
+                                    <p class="range-value">Weist</p>
+                                    <input type="range" min="0" max="50" value="5" id="lower">
+                                    <input type="range" min="0" max="50" value="45" id="upper">
+                                </span><br><br>
+                                <span class="multi-range">
+                                    <p class="range-value">Breast</p>
+                                    <input type="range" min="0" max="50" value="5" id="lower">
+                                    <input type="range" min="0" max="50" value="45" id="upper">
+                                </span><br><br>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
         <div class="model-all">
@@ -156,7 +246,7 @@
     <div class="footer_nabar">
         <div class="footer_content">
             <ul>
-                <li><a href="#">About us</a></li>
+                <li><a href="./popup.html">About us</a></li>
                 <li><a href="#">Contact us</a></li>
                 <li><a href="#">Privacy Policy</a></li>
                 <li><a href="#">Disclaimer</a></li>
@@ -164,7 +254,11 @@
             <p class="copyright">Copyright © 2022 • ABC Company.</p>
         </div>
     </div>
-
+    <script>
+        function filter(){
+            window.location.href("./popup.html");
+        }
+    </script>
 </body>
 
 </html>
