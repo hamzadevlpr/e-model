@@ -45,7 +45,7 @@
         }
 
         .breakline {
-            border: 1px solid #00A886 !important;
+            border: 2px solid #00A886 !important;
             width: 100% !important;
             margin: 5px 0 !important;
         }
@@ -54,6 +54,12 @@
             padding: 5px;
             background-color: transparent;
             color: white;
+            font-family: 'Poppins';
+            font-weight: 400;
+            font-size: 16px;
+            color: #FFFFFF;
+            padding-top: 10px;
+            line-height: 40px;
         }
 
         .closebtn {
@@ -62,7 +68,7 @@
             font-weight: bold;
             float: right;
             font-size: 22px;
-            line-height: 20px;
+            
             cursor: pointer;
             transition: 0.3s;
         }
@@ -71,12 +77,13 @@
             color: black;
         }
 
-        .product-heading {
+        .product-head {
             font-family: 'Poppins';
             font-style: normal;
             font-weight: 600;
             font-size: 18px;
             color: #FFFFFF;
+            margin-left: 10px;
         }
 
         button {
@@ -160,8 +167,8 @@
             </div>
             <h1>Your Order</h1><br><br>
             <div class="product">
+                <h5 class="product-head">Product</h5>
                 <div class="cart">
-                    <h5 class="product-head">Product</h5>
                     <hr class="breakline">
                     <span class="closebtn" onclick="this.parentElement.style.display='none';">&times;</span>
                     Amanda S
