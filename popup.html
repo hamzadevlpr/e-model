@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://kit.fontawesome.com/bf6718b6c6.js" crossorigin="anonymous"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;600;700;800&display=swap');
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            position: relative;
+        }
+
+        .popup-container {
+            width: 650px;
+            height: 450px;
+            background: #2A1933;
+            border-radius: 15px;
+            margin: auto;
+            margin-top: 100px;
+            box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+        }
+
+        .popup {
+            width: 630px;
+            height: 430px;
+            border-radius: 20px;
+             
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+
+        .main-heading {
+            padding-left: 10px;
+        }
+
+        hr {
+            border: 2px solid #00A886;
+            background-color: #00A886;
+            width: 95%;
+            margin: auto;
+            border-radius: 100px;
+            margin-top: 5px;
+        }
+
+        .close {
+            width: 20px;
+            height: 20px;
+            border-radius: 50%;
+            background-color: #00A886;
+            float: right;
+            position: relative;
+            box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+
+            cursor: pointer;
+        }
+
+        .close > i {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+
+        p.sortheading {
+            font-family: 'Poppins';
+            font-style: normal;
+            font-weight: 600;
+            font-size: 23px;
+            line-height: 34px;
+            display: flex;
+            align-items: center;
+            color: #FFFFFF;
+        }
+
+        .main-filter {
+            display: flex;
+            flex-direction: row;
+            margin-left: 10px;
+        }
+
+        .filterpopup {
+             
+            width: 290px;
+            height: 320px;
+        }
+
+
+        .radio-group {
+            padding-top: 10px;
+            font-family: 'Poppins';
+            font-size: 17px;
+            color: #fff;
+        }
+
+        .radio {
+            font-family: 'Poppins';
+            font-style: normal;
+            font-size: 17px;
+            display: inline-block;
+            vertical-align: middle;
+            color: #fff;
+            margin: 5px;
+            position: relative;
+            padding-left: 30px;
+            cursor: pointer;
+        }
+
+        .radio+.radio {
+            margin-left: 10px;
+        }
+
+        .radio input[type='radio'] {
+            display: none;
+
+        }
+
+        .radio span {
+            width: 18px;
+            height: 18px;
+            border-radius: 50%;
+            border: 2px solid #00A886;
+            display: block;
+            position: absolute;
+            top: 3px;
+            left: 0;
+        }
+
+        .radio span:after {
+            content: "";
+            height: 8px;
+            width: 8px;
+            background-color: #00A886;
+            display: block;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%) scale(0);
+            border-radius: 50%;
+            transition: 50ms ease-in-out 0s;
+        }
+
+        .radio input[type='radio']:checked~span:after {
+            transform: translate(-50%, -50%) scale(1);
+
+        }
+
+        .heifilter {
+            padding-top: 10px;
+             
+            height: 50px;
+            display: flex;
+            justify-content: space-evenly;
+            flex-direction: column;
+        }
+
+        .hei {
+            font-family: 'Poppins';
+            font-style: normal;
+            font-size: 17px;
+            color: #fff;
+        }
+
+        ::placeholder {
+            font-family: 'Poppins';
+            font-weight: 500;
+            font-size: 14px;
+            line-height: 21px;
+            color: #BDAFAF;
+        }
+
+        input[type="number"] {
+            height: 34px;
+            width: 200px;
+            outline: none;
+            padding: 10px;
+            font-family: 'Poppins';
+            color: white;
+            font-weight: 500;
+            font-size: 14px;
+            border: 1.2px solid #00A886;
+            background-color: transparent;
+            float: right;
+            border-radius: 5px;
+        }
+
+        input::-webkit-inner-spin-button {
+            -webkit-appearance: none;
+        }
+
+        .check-wrapper {
+            padding-top: 10px;
+        }
+
+        .check-wrapper h5 {
+            font-family: 'Poppins';
+            font-weight: 600;
+            font-size: 17px;
+            display: flex;
+            align-items: center;
+            color: #FFFFFF;
+            padding-bottom: 10px;
+        }
+        .check{
+             
+            padding-top: 8px;
+        }
+        .check label {
+            font-family: 'Poppins';
+            font-style: normal;
+            font-weight: 500;
+            font-size: 15px;
+            color: #FFFFFF;
+            padding: 15px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="popup-container">
+        <div class="popup">
+            <div class="main-heading">
+                <div class="close"><i class="fa-solid fa-xmark"></i></div>
+                <p class="sortheading">Sort By Feature</p>
+                <hr>
+            </div>
+            <div class="main-filter">
+                <div class="filterpopup">
+                    <div class="radio-group">Gender :
+                        <label class="radio">
+                            <input type="radio" value="male" name="gender">Male
+                            <span></span>
+                        </label>
+                        <label class="radio">
+                            <input type="radio" value="female" name="gender">Female
+                            <span></span>
+                        </label>
+                    </div>
+                    <div class="heifilter">
+                        <label class="hei">Height:
+                            <input type="number" placeholder="5.1 ft">
+                        </label>
+                    </div>
+                    <div class="check-wrapper">
+                        <h5>Complextion</h5>
+                        <div class="check">
+                            <input type="checkbox" id="check">
+                            <label for="check">Extremely Fair Skin</label>
+                        </div>
+                        <div class="check">
+                            <input type="checkbox" id="check">
+                            <label for="check">Fair Skin</label>
+                        </div>
+                        <div class="check">
+                            <input type="checkbox" id="check">
+                            <label for="check">Medium Skin</label>
+                        </div>
+                        <div class="check">
+                            <input type="checkbox" id="check">
+                            <label for="check">Olive Skin</label>
+                        </div>
+                        <div class="check">
+                            <input type="checkbox" id="check">
+                            <label for="check">Brown Skin</label>
+                        </div>
+                    </div>
+                </div>
+                <div class="filterpopup">
+                    <div class="check-wrapper">
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
