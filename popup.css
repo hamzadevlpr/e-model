@@ -1,24 +1,29 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;600;700;800&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
 body {
-    position: relative !important;
+    position: relative;
 }
-#popup1{
-    display: none;
-}
+
 .popup-container {
-    width: 650px;
-    height: 450px;
+    width: 800px;
+    height: 550px;
     background: #2A1933;
     border-radius: 15px;
     margin: auto;
-    margin-top: 100px;
+    margin-top: 50px;
     box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
 }
 
 .popup {
-    width: 630px;
-    height: 430px;
+    width: 754px;
+    height: 494px;
     border-radius: 20px;
-
     position: absolute;
     top: 50%;
     left: 50%;
@@ -32,7 +37,7 @@ body {
 hr {
     border: 2px solid #00A886;
     background-color: #00A886;
-    width: 95%;
+    width: 100%;
     margin: auto;
     border-radius: 100px;
     margin-top: 5px;
@@ -46,7 +51,8 @@ hr {
     float: right;
     position: relative;
     box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
-
+    top: -12px;
+    right: -7px;
     cursor: pointer;
 }
 
@@ -68,10 +74,21 @@ p.sortheading {
     color: #FFFFFF;
 }
 
+p.clear {
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 15px;
+    color: #FFFFFF;
+    float: right;
+    padding: 10px;
+}
+
 .main-filter {
     display: flex;
     flex-direction: row;
     margin-left: 10px;
+    margin-top: 12px;
 }
 
 .filterpopup {
@@ -80,12 +97,16 @@ p.sortheading {
     height: 320px;
 }
 
+.tndfilter {
+    margin-left: 50px;
+}
 
 .radio-group {
-    padding-top: 10px;
+    margin-top: 34px;
     font-family: 'Poppins';
     font-size: 17px;
     color: #fff;
+    /* border: 1px solid #fff; */
 }
 
 .radio {
@@ -101,8 +122,8 @@ p.sortheading {
     cursor: pointer;
 }
 
-.radio+.radio {
-    margin-left: 10px;
+.ma {
+    margin-left: 30px;
 }
 
 .radio input[type='radio'] {
@@ -141,11 +162,11 @@ p.sortheading {
 }
 
 .heifilter {
-    padding-top: 10px;
-    height: 50px;
+    margin-top: 20px;
     display: flex;
     justify-content: space-evenly;
     flex-direction: column;
+    margin-bottom: 9px;
 }
 
 .hei {
@@ -153,6 +174,13 @@ p.sortheading {
     font-style: normal;
     font-size: 17px;
     color: #fff;
+    position: relative;
+}
+
+.hei>p {
+    display: inline;
+    position: absolute;
+    top: 8px;
 }
 
 ::placeholder {
@@ -164,7 +192,7 @@ p.sortheading {
 }
 
 input[type="number"] {
-    height: 34px;
+    height: 39px;
     width: 200px;
     outline: none;
     padding: 10px;
@@ -172,7 +200,7 @@ input[type="number"] {
     color: white;
     font-weight: 500;
     font-size: 14px;
-    border: 1.2px solid #00A886;
+    border: 2px solid #00A886;
     background-color: transparent;
     float: right;
     border-radius: 5px;
@@ -224,7 +252,13 @@ input::-webkit-inner-spin-button {
     border-radius: 6px;
     padding: 0 15px;
     background-color: transparent;
-    margin: 15px auto;
+    margin-top: 34px;
+    margin-left: 34px;
+}
+
+.eye-box,
+.select-box {
+    margin-top: 25px !important;
 }
 
 .select-box select {
@@ -323,4 +357,22 @@ input[type=range]::-webkit-slider-thumb::before {
     font-size: 17px;
     color: #FFFFFF;
     margin-left: 38px;
+    margin-top: 15px !important;
+}
+
+.apply {
+    width: 140px;
+    height: 38px;
+    background: #00A886;
+    border: 2px solid #00A886;
+    border-radius: 5px;
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 17px;
+    color: #FFFFFF;
+    position: absolute;
+    top: 93%;
+    left: 50%;
+    transform: translate(-50%, -50%)
 }
