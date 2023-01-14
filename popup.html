@@ -8,18 +8,18 @@
     <title>Document</title>
     <link rel="stylesheet" href="popup.css">
     <script src="https://kit.fontawesome.com/bf6718b6c6.js" crossorigin="anonymous"></script>
-    
+
 </head>
 
 <body>
-    
+
     <div id="popup1" class="overlay popup-container">
         <div class="popup">
             <div class="main-heading">
                 <div class="close"><i class="fa-solid fa-xmark"></i></div>
                 <p class="sortheading">Sort By Feature</p>
                 <hr>
-                <p class="clear">clear all</p>
+                <button class="clear">clear all</button>
             </div>
             <div class="main-filter">
                 <div class="filterpopup">
@@ -34,7 +34,8 @@
                         </label>
                     </div>
                     <div class="heifilter">
-                        <label class="hei"><p>Height :</p>
+                        <label class="hei">
+                            <p>Height :</p>
                             <input type="number" placeholder="5.1 ft">
                         </label>
                     </div>
@@ -83,28 +84,58 @@
                                 <option>other</option>
                             </select>
                         </div>
-                        <span class="multi-range">
+                        <div class="multi-range">
                             <p class="range-value">Hips</p>
-                            <input type="range" min="0" max="50" value="5" id="lower">
-                            <input type="range" min="0" max="50" value="45" id="upper">
-                        </span><br><br>
+                            <output class="bubble bubbleright"></output>
+                            <input name="gdskill[2]" id="gdskill2" type="range" min="0" value="0" max="100" step="1"
+                                list="ticks" oninput="Output2.value = gdskill2.value" />
+                            <output id="Output2">0</output>
+                        </div><br><br>
                         <span class="multi-range">
                             <p class="range-value">Weist</p>
-                            <input type="range" min="0" max="50" value="5" id="lower">
-                            <input type="range" min="0" max="50" value="45" id="upper">
+                            <output class="bubble bubbleright"></output>
+                            <input name="gdskill[3]" id="gdskill3" type="range" min="0" value="0" max="100" step="1"
+                                list="ticks" oninput="Output3.value = gdskill3.value" />
+                            <output id="Output3">0</output>
                         </span><br><br>
                         <span class="multi-range">
                             <p class="range-value">Breast</p>
-                            <input type="range" min="0" max="50" value="5" id="lower">
-                            <input type="range" min="0" max="50" value="45" id="upper">
+                            <output class="bubble bubbleright"></output>
+                            <input name="gdskill[4]" id="gdskill4" type="range" min="0" value="0" max="100" step="1"
+                                list="ticks" oninput="Output4.value = gdskill4.value" />
+                            <output id="Output4">0</output>
                         </span><br><br>
                     </div>
                     <button class="apply">Apply</button>
                 </div>
             </div>
         </div>
-        
+
     </div>
+    <script>
+        const allRanges = document.querySelectorAll(".multi-range");
+        allRanges.forEach(wrap => {
+            const range = wrap.querySelector(".range");
+            const bubble = wrap.querySelector(".bubble");
+
+            range.addEventListener("input", () => {
+                setBubble(range, bubble);
+            });
+            setBubble(range, bubble);
+        });
+
+        function setBubble(range, bubble) {
+            const val = range.value;
+            const min = range.min ? range.min : 0;
+            const max = range.max ? range.max : 100;
+            const newVal = Number(((val - min) * 100) / (max - min));
+            bubble.innerHTML = val;
+
+            // Sorta magic numbers based on size of the native UI thumb
+            bubble.style.left = `calc(${newVal}% + (${8 - newVal * 0.15}px))`;
+        }
+
+    </script>
 </body>
 
 </html>
