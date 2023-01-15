@@ -691,9 +691,7 @@ button.bk {
     font-weight: 500;
     font-size: 14px;
     line-height: 18px;
-    color: #D0DAF5;
     padding: 10px;
-
 }
 
 .social_media i {
@@ -704,9 +702,9 @@ button.bk {
 
 .footer_nabar {
     height: auto;
-    width: 85%;
+    width: 90%;
     margin: 0 auto;
-    border-top: 1px solid white;
+    border-top: 2px solid white;
     opacity: 0.2;
 }
 
@@ -716,22 +714,20 @@ button.bk {
     color: white;
 }
 
-.footer_nabar a {
+.footer_nabar  a {
     text-decoration: none;
     font-family: 'Poppins', sans-serif;
-    font-style: normal;
     font-weight: 500;
     font-size: 14px;
-    line-height: 18px;
     text-transform: uppercase;
-    color: white;
+    color: #fff;
 }
 
 a:hover {
     color: white;
 }
 
-.footer_nabar>ul {
+.footer_nabar > ul {
     margin: 0;
     padding: 0;
 }
